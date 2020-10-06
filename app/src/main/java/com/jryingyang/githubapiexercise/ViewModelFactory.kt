@@ -2,7 +2,7 @@ package com.jryingyang.githubapiexercise
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.jryingyang.accessappexercise.data.GithubRepository
+import com.jryingyang.githubapiexercise.data.GithubRepository
 
 class ViewModelFactory(private val repository: GithubRepository) :
     ViewModelProvider.NewInstanceFactory() {

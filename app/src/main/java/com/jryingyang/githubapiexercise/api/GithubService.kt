@@ -13,8 +13,6 @@ interface GithubService {
 
     @GET("users")
     suspend fun getUserList(
-        @Query("since") page: Int,
-        @Query("per_page") itemsPerPage: Int
     ): List<User>
 
     @GET("users/{userName}")
