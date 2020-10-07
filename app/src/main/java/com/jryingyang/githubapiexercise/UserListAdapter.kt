@@ -4,7 +4,8 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.jryingyang.githubapiexercise.model.User
 
-class UserListAdapter(private val data: List<User>) : RecyclerView.Adapter<RecyclerViewHolder>() {
+class UserListAdapter(private val data: List<User>, private val listener: UserItemClickListener) :
+    RecyclerView.Adapter<RecyclerViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerViewHolder {
         return RecyclerViewHolder.create(parent)
     }
@@ -15,6 +16,9 @@ class UserListAdapter(private val data: List<User>) : RecyclerView.Adapter<Recyc
 
     override fun onBindViewHolder(holder: RecyclerViewHolder, position: Int) {
         val item = data[position]
-        holder.bind(item)
+        holder.itemView.setOnClickListener {
+            listener.onUserItemClick(item)
+        }
+        holder.bind(item, listener)
     }
 }
