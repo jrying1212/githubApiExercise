@@ -1,4 +1,4 @@
-package com.jryingyang.githubapiexercise.ui
+package com.jryingyang.githubapiexercise.utils
 
 import android.view.View
 import android.widget.ImageView
