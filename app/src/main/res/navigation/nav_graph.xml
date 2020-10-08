@@ -5,7 +5,7 @@
     app:startDestination="@id/mainFragment">
     <fragment
         android:id="@+id/mainFragment"
-        android:name="com.jryingyang.githubapiexercise.MainFragment"
+        android:name="com.jryingyang.githubapiexercise.ui.MainFragment"
         android:label="MainFragment">
         <action
             android:id="@+id/action_mainFragment_to_detailFragment"
@@ -18,7 +18,7 @@
     </fragment>
     <fragment
         android:id="@+id/detailFragment"
-        android:name="com.jryingyang.githubapiexercise.DetailFragment"
+        android:name="com.jryingyang.githubapiexercise.ui.DetailFragment"
         android:label="DetailFragment">
         <argument
             android:name="data"

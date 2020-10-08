@@ -1,4 +1,4 @@
-package com.jryingyang.githubapiexercise
+package com.jryingyang.githubapiexercise.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -13,6 +13,7 @@ import androidx.navigation.fragment.navArgs
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.request.RequestOptions
+import com.jryingyang.githubapiexercise.R
 import com.jryingyang.githubapiexercise.api.GithubService
 import com.jryingyang.githubapiexercise.data.GithubRepository
 import com.jryingyang.githubapiexercise.databinding.FragmentUserDetailBinding

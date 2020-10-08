@@ -1,4 +1,4 @@
-package com.jryingyang.githubapiexercise
+package com.jryingyang.githubapiexercise.ui
 
 import android.os.Bundle
 import android.util.Log
@@ -10,13 +10,15 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.jryingyang.githubapiexercise.*
 import com.jryingyang.githubapiexercise.api.GithubService
 import com.jryingyang.githubapiexercise.data.GithubRepository
 import com.jryingyang.githubapiexercise.model.User
 import kotlinx.coroutines.MainScope
 import kotlinx.coroutines.launch
 
-class MainFragment : Fragment(), UserItemClickListener {
+class MainFragment : Fragment(),
+    UserItemClickListener {
 
     companion object {
         private val TAG = MainFragment::class.java.name
@@ -48,13 +50,20 @@ class MainFragment : Fragment(), UserItemClickListener {
         recyclerView = view.findViewById(R.id.userList)
         recyclerView.layoutManager = LinearLayoutManager(activity)
         MainScope().launch {
-            recyclerView.adapter = UserListAdapter(viewModel.getUserList(), this@MainFragment)
+            recyclerView.adapter =
+                UserListAdapter(
+                    viewModel.getUserList(),
+                    this@MainFragment
+                )
         }
     }
 
     override fun onUserItemClick(user: User) {
         val navController = findNavController()
-        val action = MainFragmentDirections.actionMainFragmentToDetailFragment(user.login)
+        val action =
+            MainFragmentDirections.actionMainFragmentToDetailFragment(
+                user.login
+            )
         navController.navigate(action)
     }
 }

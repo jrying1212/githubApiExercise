@@ -1,4 +1,4 @@
-package com.jryingyang.githubapiexercise
+package com.jryingyang.githubapiexercise.ui
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

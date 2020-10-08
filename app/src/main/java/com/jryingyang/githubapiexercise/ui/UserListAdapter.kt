@@ -1,8 +1,10 @@
-package com.jryingyang.githubapiexercise
+package com.jryingyang.githubapiexercise.ui
 
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.jryingyang.githubapiexercise.model.User
+import com.jryingyang.githubapiexercise.ui.RecyclerViewHolder
+import com.jryingyang.githubapiexercise.ui.UserItemClickListener
 
 class UserListAdapter(private val data: List<User>, private val listener: UserItemClickListener) :
     RecyclerView.Adapter<RecyclerViewHolder>() {

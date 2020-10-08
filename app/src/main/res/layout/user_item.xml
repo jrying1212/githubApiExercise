@@ -6,7 +6,7 @@
 
         <variable
             name="listener"
-            type="com.jryingyang.githubapiexercise.UserItemClickListener" />
+            type="com.jryingyang.githubapiexercise.ui.UserItemClickListener" />
 
         <variable
             name="user"

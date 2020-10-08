@@ -1,4 +1,4 @@
-package com.jryingyang.githubapiexercise
+package com.jryingyang.githubapiexercise.ui
 
 import androidx.lifecycle.ViewModel
 import com.jryingyang.githubapiexercise.data.GithubRepository

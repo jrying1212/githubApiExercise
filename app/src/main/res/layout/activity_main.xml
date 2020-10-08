@@ -4,19 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
         <variable
             name="userViewModel"
-            type="com.jryingyang.githubapiexercise.UserViewModel" />
+            type="com.jryingyang.githubapiexercise.ui.UserViewModel" />
     </data>
-
 
     <FrameLayout
         android:id="@+id/fragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".MainActivity">
-
+        tools:context=".ui.MainActivity">
 
         <fragment
             android:id="@+id/main_fragment"
